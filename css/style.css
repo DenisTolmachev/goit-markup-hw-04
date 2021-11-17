@@ -7,8 +7,9 @@
   --hover-text-color: #ffffff;
   --logo-darck-color: #000000;
   --footer-link-color: rgba(255, 255, 255, 0.6);
-  --current-link-color: #0000ff;
+  --footer-social-icons-color: rgba(255, 255, 255, 0.1);
   --portfolio-border-color: #eeeeee;
+  --clients-border-color: #afb1b8;
 }
 
 body {
@@ -133,13 +134,9 @@ p {
   margin-right: 50px;
 }
 
-
-
-
-
 .contacts-link {
-	display: inline-flex;
-	align-items: center;
+  display: inline-flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
@@ -149,14 +146,33 @@ p {
 
 .header-phone::before {
   content: '';
-  height: 20px;
-  width: 20px;
-  background-color: violet;
+  display: block;
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+  outline: 1px solid var(--main-brand-color);
+}
+
+.header-email::before {
+  content: '';
+  display: block;
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  outline: 1px solid var(--main-brand-color);
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--main-brand-color);
+}
+
+.header-phone:hover::before {
+  background-color: var(--main-brand-color);
+}
+
+.header-email:hover::before {
+  background-color: var(--main-brand-color);
 }
 
 /*Герой*/
@@ -234,11 +250,12 @@ p {
 }
 
 .features-item::before {
-	display: block;
-	content: "";
-	height: 120px;
-	background-color:var(--secondary-background-color);
-	margin-bottom: 30px;
+  display: block;
+  content: '';
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  margin-bottom: 30px;
+  border-radius: 4px;
 }
 
 .features-item:not(:last-child) {
@@ -317,12 +334,66 @@ p {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--paragraf-color);
+  margin-bottom: 16px;
+}
+
+.social-icons-list {
+  display: flex;
+  padding: 0 32px;
+}
+
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  outline: 1px solid var(--main-brand-color);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--main-brand-color);
+}
+
+/*Наши клиенты*/
+
+.clients-list {
+  display: flex;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--clients-border-color);
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--main-brand-color);
 }
 
 /*Подвал*/
 footer {
   background-color: var(--main-background-color);
   padding: 60px 0;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.address-footer {
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -350,6 +421,28 @@ footer {
   display: block;
   letter-spacing: 0.03em;
   color: var(--footer-link-color);
+}
+
+.social-icons-footer {
+  margin-top: 12px;
+}
+
+.social-icons-footer-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hover-text-color);
+  margin-bottom: 20px;
+}
+
+.social-icons-list-footer {
+  padding: 0;
+}
+
+.social-icons-link-footer {
+  background-color: var(--footer-social-icons-color);
 }
 
 /*Страница портфолио*/
