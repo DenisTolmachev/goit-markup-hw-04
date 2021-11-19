@@ -144,35 +144,24 @@ p {
   color: var(--paragraf-color);
 }
 
-.header-phone::before {
-  content: '';
-  display: block;
-  height: 16px;
-  width: 10px;
+.header-icon {
+  fill: currentColor;
   margin-right: 10px;
-  outline: 1px solid var(--main-brand-color);
 }
 
-.header-email::before {
-  content: '';
-  display: block;
-  height: 12px;
+.envelope-icon {
   width: 16px;
-  margin-right: 10px;
-  outline: 1px solid var(--main-brand-color);
+  height: 12px;
+}
+
+.smartphone-icon {
+  width: 10px;
+  height: 16px;
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--main-brand-color);
-}
-
-.header-phone:hover::before {
-  background-color: var(--main-brand-color);
-}
-
-.header-email:hover::before {
-  background-color: var(--main-brand-color);
 }
 
 /*Герой*/
