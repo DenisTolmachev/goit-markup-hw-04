@@ -7,7 +7,7 @@
   --hover-text-color: #ffffff;
   --logo-darck-color: #000000;
   --footer-link-color: rgba(255, 255, 255, 0.6);
-  --footer-social-icons-color: rgba(255, 255, 255, 0.1);
+  --footer-social-color: rgba(255, 255, 255, 0.1);
   --portfolio-border-color: #eeeeee;
   --clients-border-color: #afb1b8;
 }
@@ -337,26 +337,43 @@ p {
   margin-bottom: 16px;
 }
 
-.social-icons-list {
+.social-list {
   display: flex;
   padding: 0 32px;
 }
 
-.social-icons-item:not(:last-child) {
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social-icons-link {
-  display: block;
-  width: 44px;
-  height: 44px;
+.social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  outline: 1px solid var(--main-brand-color);
+  align-items: center;
+  justify-content: center;
+  fill: var(--clients-border-color)
 }
 
-.social-icons-link:hover,
-.social-icons-link:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--main-brand-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+	fill:var(--hover-text-color)
+}
+
+.social-icon {
+	width:20px;
+	height: 20px;
 }
 
 /*Наши клиенты*/
@@ -423,11 +440,11 @@ footer {
   color: var(--footer-link-color);
 }
 
-.social-icons-footer {
+.social-footer {
   margin-top: 12px;
 }
 
-.social-icons-footer-title {
+.social-footer-title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -437,12 +454,12 @@ footer {
   margin-bottom: 20px;
 }
 
-.social-icons-list-footer {
+.social-list-footer {
   padding: 0;
 }
 
-.social-icons-link-footer {
-  background-color: var(--footer-social-icons-color);
+.social-link-footer {
+  background-color: var(--footer-social-color);
 }
 
 /*Страница портфолио*/
