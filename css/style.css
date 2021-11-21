@@ -166,21 +166,12 @@ p {
 
 /*Герой*/
 .hero {
-  padding: 0;
-  background-color: var(--main-background-color);
-}
-
-.overlay {
-  height: 600px;
-  max-width: 1600px;
-  margin: 0 auto;
   padding: 200px 0;
-
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg-image.jpg);
+  background-color: var(--main-background-color);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 .hero-title {
@@ -240,9 +231,8 @@ p {
 
 .features-icon-field {
   display: flex;
-  height: 120px;
+  padding: 25px 0;
   background-color: var(--secondary-background-color);
-  align-items: center;
   justify-content: center;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -252,15 +242,6 @@ p {
   width: 70px;
   height: 70px;
 }
-
-/* .features-item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-color: var(--secondary-background-color);
-  margin-bottom: 30px;
-  border-radius: 4px;
-} */
 
 .features-item:not(:last-child) {
   margin-right: 30px;
@@ -362,22 +343,19 @@ p {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  fill: var(--clients-border-color);
+  color: var(--clients-border-color);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--main-brand-color);
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: var(--hover-text-color);
+  color: var(--hover-text-color);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
+  fill: currentColor;
 }
 
 /*Наши клиенты*/
@@ -398,18 +376,19 @@ p {
   height: 92px;
   border: 1px solid var(--clients-border-color);
   border-radius: 4px;
-  fill: var(--clients-border-color);
-}
-
-.clients-icon {
-  width: 106px;
-  height: 60px;
+  color: var(--clients-border-color);
 }
 
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--main-brand-color);
-  fill: var(--main-brand-color);
+  color: var(--main-brand-color);
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
 }
 
 /*Подвал*/
