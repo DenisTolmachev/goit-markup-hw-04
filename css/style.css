@@ -41,6 +41,12 @@ p {
   margin: 0;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -453,6 +459,10 @@ footer {
 .social-link-footer {
   background-color: var(--footer-social-color);
   fill: var(--hover-text-color);
+}
+
+.social-icon-footer {
+	fill: var(--hover-text-color);
 }
 
 /*Страница портфолио*/
